@@ -17,6 +17,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+/*Participation 9: Detail 1 Added it here because I forgot to add it to original submission.
+
+App 1: WhatsApp Messenger
+1.	There is a action bar menu present. The items available are: search, text and a menu
+icon.
+2.	The floating action button in the app is a speech to text component. Clicking on the
+button will allow google to listen in and help you find what you are looking for.
+3.	The app makes use of a navigation drawer. When the menu icon is clicked we get 6
+options: Gallery, Photo, Video, Audio, Location and Contact.
+4.	The screen does not switch when the user swipes left or right.
+
+App 2: Instagram
+1.	Instagram has an action bar menu which differs from one screen to another. Some of the
+things the action bars contains are: search, capture photo, messaging option.
+2.	THere are no floating floating action button.
+3.	The navigation drawer appears on the bottom of this app. It contains buttons for getting
+to Instagram’s homepage, search option, add a picture, favorites and a button to get to your own home page.
+*/
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
