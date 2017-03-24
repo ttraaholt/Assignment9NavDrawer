@@ -1,6 +1,9 @@
 package css.cis3334.unit9participation_menus;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -12,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -67,8 +71,41 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_delete) {
+            Toast.makeText(getApplicationContext(), "Deleting a study mate is not available yet.", Toast.LENGTH_LONG)
+                    .show();
             return true;
+        }
+
+        else if (id == R.id.action_add) {
+            Toast.makeText(getApplicationContext(), "Adding study mates is not available yet.", Toast.LENGTH_LONG)
+                    .show();
+            return true;
+        }
+        else if (id == R.id.action_settings) {
+            Intent intent = new Intent(Settings.ACTION_SETTINGS);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                return true;
+            }
+        }
+        else if (id == R.id.action_email) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.putExtra(Intent.EXTRA_EMAIL, "ttraaholt@css.edu");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "hello");
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+        }
+        else if (id == R.id.action_sms) {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("smsto:" + "7152925525"));
+            intent.putExtra("sms_body", "Hi");
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+                return true;
+            }
         }
 
         return super.onOptionsItemSelected(item);
