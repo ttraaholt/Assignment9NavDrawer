@@ -3,33 +3,34 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_add"
-        android:orderInCategory="100"
-        android:title="@string/add"
-        app:showAsAction="never"
-        />
-    <item
         android:id="@+id/action_delete"
         android:orderInCategory="100"
         android:title="Delete"
         app:showAsAction="never"
         tools:ignore="HardcodedText" />
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_add"
         android:orderInCategory="100"
-        android:title="@string/settings"
+        android:title="Add"
         app:showAsAction="never"
-        />
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/action_email"
         android:orderInCategory="100"
-        android:title="@string/email"
-        app:showAsAction="ifRoom"
-        android:icon="@android:drawable/ic_dialog_email" />
+        android:title="Email"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
     <item
         android:id="@+id/action_sms"
         android:orderInCategory="100"
-        android:title="@string/send_text"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_action_sms" />
+        android:title="SMS"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText" />
+
 </menu>
